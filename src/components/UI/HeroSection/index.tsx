@@ -1,17 +1,16 @@
 'use client';
-import Image from 'next/image';
-import { Wrapper, Inner, Pill, HeroTextContainer } from './styles';
-import ic_chevron_right from '../../../../public/svgs/ic_chevron_right.svg';
-import { GetStartedButton } from '@/components';
+import Button from '@/components/Common/Button';
 import MaskText from '@/components/Common/MaskText';
+import Image from 'next/image';
 import { useIsMobile } from '../../../../libs/useIsMobile';
+import ic_chevron_right from '../../../../public/svgs/ic_chevron_right.svg';
 import {
   mobileParagraphPhrases,
   mobilePhrases,
   paragraphPhrases,
   phrases,
 } from './constants';
-import Button from '@/components/Common/Button';
+import { HeroTextContainer, Inner, Pill, Wrapper } from './styles';
 
 const HeroSection = () => {
   const isMobile = useIsMobile();
@@ -19,7 +18,7 @@ const HeroSection = () => {
     <Wrapper id='home'>
       <Inner>
         <Pill>
-          <span>A hasabTech Led Initiative</span>
+          <span>Building Software — and the People Who Build It.</span>
           <Image src={ic_chevron_right} alt="chevron-right" />
         </Pill>
         <HeroTextContainer>

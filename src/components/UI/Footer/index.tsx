@@ -1,19 +1,19 @@
 import Image from 'next/image';
-import hasabTech_footer_logo from '../../../../public/images/hasabTech-education-logo.svg';
+import hasabTech_footer_logo from '../../../../public/images/logos/logo-white.gif';
 import ic_copyright from '../../../../public/svgs/ic_copyright.svg';
 
+import JoinCommunity from '../JoinCommunity';
 import {
-  Wrapper,
-  Inner,
+  CopyRight,
+  FooterBottom,
   FooterLogo,
   FooterMainContent,
+  IconCtn,
+  Inner,
   SocialsContainer,
   TextCtn,
-  IconCtn,
-  FooterBottom,
-  CopyRight,
+  Wrapper,
 } from './styles';
-import JoinCommunity from '../JoinCommunity';
 
 const Footer = () => {
   return (

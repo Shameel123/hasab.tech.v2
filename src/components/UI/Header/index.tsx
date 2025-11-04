@@ -5,7 +5,7 @@ import Button from '@/components/Common/Button';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
-import logo_white from '../../../../public/images/hasabtech-education-logo.png';
+import logo_white from '../../../../public/images/logos/logo-white.gif';
 import ic_bars from '../../../../public/svgs/ic_bars.svg';
 import { links, menu } from './constants';
 import {
