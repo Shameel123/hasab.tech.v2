@@ -1,5 +1,6 @@
 'use client';
 import MaskText from '@/components/Common/MaskText';
+import React from 'react';
 import { useIsMobile } from '../../../../libs/useIsMobile';
 import {
   desktopHeaderPhrases,
@@ -20,21 +21,24 @@ const programs = [
     description: "Kickstart your career with structured guidance and mentorship.",
     status: "Active",
     icon: "🚀",
-    link: "#"
+    link: "https://accelerator.hasab.tech/",
+    isComingSoon: false
   },
   {
     title: "Mock Interviews & Prep Guides",
     description: "Practice with industry experts to ace your tech job interviews.",
     status: "Coming Soon",
     icon: "🌍",
-    link: "#"
+    link: "#",
+    isComingSoon: true
   },
   {
     title: "Hackathons",
     description: "Compete, collaborate, and showcase your skills.",
     status: "Coming Soon",
     icon: "💡",
-    link: "#"
+    link: "#",
+    isComingSoon: true
   },
 ];
 
@@ -56,6 +60,49 @@ const ProgramsSection = () => {
         <ProgramsGrid>
           {programs.map((program, index) => {
             const isExternal = program.link?.startsWith('http');
+            
+            const handleCardClick = (e: React.MouseEvent) => {
+              if (program.isComingSoon) {
+                e.preventDefault();
+                alert("The following program will be launched soon, please stay tuned!");
+              }
+            };
+
+            if (program.isComingSoon) {
+              return (
+                <div
+                  key={index}
+                  onClick={handleCardClick}
+                  style={{ textDecoration: 'none', display: 'block', color: 'inherit', cursor: 'pointer' }}
+                >
+                  <ProgramCard
+                    onMouseMove={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      e.currentTarget.style.setProperty("--x", `${x}px`);
+                      e.currentTarget.style.setProperty("--y", `${y}px`);
+                    }}
+                  >
+                    <div className="icon">{program.icon}</div>
+                    <div className="title">{program.title}</div>
+                    <div className="description">{program.description}</div>
+                    <span
+                      className={`status ${
+                        program.status === "Active"
+                          ? "active"
+                          : program.status === "Planned"
+                          ? "planned"
+                          : "coming-soon"
+                      }`}
+                    >
+                      {program.status}
+                    </span>
+                  </ProgramCard>
+                </div>
+              );
+            }
+
             return (
               <a
                 key={index}

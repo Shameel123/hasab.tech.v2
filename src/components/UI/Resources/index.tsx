@@ -3,7 +3,7 @@ import { Card, CardDescription, CardIcon, Cards, CardTitle, Description, Heading
 
 const ResourcesSection = () => {
   return (
-    <Wrapper>
+    <Wrapper id="resources">
       <Inner>
         <Heading>Our Resources</Heading>
         <Description>
@@ -11,7 +11,7 @@ const ResourcesSection = () => {
         </Description>
 
         <Cards>
-          <Card href="https://hasabtech.hashnode.dev" target="_blank" rel="noopener noreferrer">
+          <Card href="https://hashnode.com/@hasabtech" target="_blank" rel="noopener noreferrer">
             <CardTitle>Blogs</CardTitle>
             <CardIcon>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="48" height="48" fill="#265FF7">
@@ -22,7 +22,7 @@ const ResourcesSection = () => {
               Read our latest articles on tech, development practices, and industry insights.
             </CardDescription>
           </Card>
-          <Card href="https://www.youtube.com/@hasabtech" target="_blank" rel="noopener noreferrer">
+          <Card href="https://www.youtube.com/@hasabTech" target="_blank" rel="noopener noreferrer">
             <CardTitle>Youtube</CardTitle>
             <CardIcon>
               <svg width="48" height="48" viewBox="0 0 24 24" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">

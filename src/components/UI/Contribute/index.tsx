@@ -19,21 +19,21 @@ const steps = [
     heading: 'Contribute as a Sponsor',
     description:
       'Empower aspiring developers by sponsoring their educational journey through our student fund. Your contribution helps bridge the gap between potential and opportunity.',
-    link: '#sponsor',
+    link: 'https://forms.gle/tVmUynK88RFqopcX8',
   },
   {
     number: '02',
     heading: 'Contribute as a Mentor',
     description:
       'Share your expertise and guide the next generation of tech talent. Join our mentorship program and make a lasting impact on learners\' career development.',
-    link: '#mentor',
+    link: 'https://forms.gle/tVmUynK88RFqopcX8',
   },
   {
     number: '03',
     heading: 'Contribute as a Team Member',
     description:
       'Leverage your skills in development, design, social media, or other areas to help grow our mission. Become part of a team dedicated to transforming tech education.',
-    link: '#team-member',
+    link: 'https://forms.gle/tVmUynK88RFqopcX8',
   },
 ];
 
@@ -60,7 +60,7 @@ const Contribute = () => {
               >
                 <StepHeading>{step.heading}</StepHeading>
                 <StepDescription>{step.description}</StepDescription>
-                <LearnMoreButton href={step.link}>Learn more</LearnMoreButton>
+                <LearnMoreButton href={step.link} target="_blank" rel="noopener noreferrer">I'm Interested!</LearnMoreButton>
               </CardContent>
             </StepCard>
           ))}

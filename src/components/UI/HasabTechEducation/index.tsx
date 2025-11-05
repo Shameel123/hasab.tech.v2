@@ -16,10 +16,10 @@ import {
     Header,
     Inner,
     IntroText,
-    PrimaryCTA,
+    PrimaryCTAScroll,
     SecondaryCTA,
     Tagline,
-    Wrapper,
+    Wrapper
 } from './styles';
 
 const HasabTechEducation = () => {
@@ -71,9 +71,14 @@ const HasabTechEducation = () => {
           </IntroText>
 
           <CTASection>
-            <PrimaryCTA href="#programs">
+            <PrimaryCTAScroll
+              to="contribute"
+              smooth={true}
+              offset={-190}
+              duration={600}
+            >
               Join the team
-            </PrimaryCTA>
+            </PrimaryCTAScroll>
             <SecondaryCTA href="https://forms.gle/kE3L55e7zsN1VZ3j9" target="_blank" rel="noopener noreferrer">
               Apply Now!
             </SecondaryCTA>

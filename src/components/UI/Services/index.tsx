@@ -1,12 +1,11 @@
 "use client";
-import Button from '@/components/Common/Button';
 import MaskText from '@/components/Common/MaskText';
 import {
-    Header,
-    Inner,
-    ProgramCard,
-    ProgramsGrid,
-    Wrapper,
+  Header,
+  Inner,
+  ProgramCard,
+  ProgramsGrid,
+  Wrapper,
 } from '@/components/UI/Programs/styles';
 import { styled } from 'styled-components';
 import { useIsMobile } from '../../../../libs/useIsMobile';
@@ -127,11 +126,35 @@ const ServicesSection = () => {
               </div>
             ))}
             <div>
-              <Button
-                padding="0.75rem 1rem"
-                text={'Discuss a project'}
-                link={'#contact'}
-              />
+              <a
+                href="mailto:contact@hasab.tech"
+                style={{
+                  display: 'inline-flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  padding: '0.75rem 1rem',
+                  borderRadius: '6.25rem',
+                  background: 'var(--primaryOrange)',
+                  color: 'var(--primaryBlue)',
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                  transition: 'background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgb(250, 138, 78)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0 6px 16px rgba(250, 138, 78, 0.35)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'var(--primaryOrange)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                Discuss a project
+              </a>
             </div>
           </div>
         </WhyWrapper>

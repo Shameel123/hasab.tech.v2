@@ -1,4 +1,5 @@
 'use client';
+import { Link as ScrollLink } from 'react-scroll';
 import { styled } from 'styled-components';
 import background_tech_girl from '../../../../public/images/9.jpg';
 
@@ -147,6 +148,33 @@ export const CTASection = styled.div`
 `;
 
 export const PrimaryCTA = styled.a`
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 6.25rem;
+  background: var(--primaryOrange);
+  color: var(--primaryBlue);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+
+  &:hover {
+    background: rgb(250, 138, 78);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(250, 138, 78, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0.875rem 1.75rem;
+  }
+`;
+
+export const PrimaryCTAScroll = styled(ScrollLink)`
   display: inline-flex;
   justify-content: center;
   align-items: center;

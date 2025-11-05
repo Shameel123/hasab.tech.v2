@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
 import { styled } from 'styled-components';
 
 export const Wrapper = styled.section`
@@ -157,7 +158,7 @@ export const SubNav = styled.div`
   }
 `;
 
-export const SubNavItem = styled(Link)`
+export const SubNavItem = styled(ScrollLink)`
   display: block;
   padding: 0.6rem 0.75rem;
   color: var(--link-color);
@@ -165,6 +166,22 @@ export const SubNavItem = styled(Link)`
   border-radius: 8px;
   text-decoration: none;
   white-space: nowrap;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+`;
+
+export const SubNavItemExternal = styled.a`
+  display: block;
+  padding: 0.6rem 0.75rem;
+  color: var(--link-color);
+  font-size: 0.95rem;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
 
   &:hover {
     background: rgba(255, 255, 255, 0.06);

@@ -71,7 +71,7 @@ const Registrations = () => {
             link={'https://forms.gle/kE3L55e7zsN1VZ3j9'}
             openInNewTab
           />
-          <SecondaryCTA href="#education">Learn More</SecondaryCTA>
+          <SecondaryCTA href="https://accelerator.hasab.tech/" target="_blank" rel="noopener noreferrer">Learn More</SecondaryCTA>
         </div>
       </Inner>
     </Wrapper>
