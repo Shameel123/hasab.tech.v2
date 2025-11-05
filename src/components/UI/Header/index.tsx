@@ -9,15 +9,15 @@ import logo_white from '../../../../public/images/logos/logo-white.gif';
 import ic_bars from '../../../../public/svgs/ic_bars.svg';
 import { links, menu } from './constants';
 import {
-  BurgerMenu,
-  CallToActions,
-  Inner,
-  LogoContainer,
-  Nav,
-  NavItem,
-  SubNav,
-  SubNavItem,
-  Wrapper,
+    BurgerMenu,
+    CallToActions,
+    Inner,
+    LogoContainer,
+    Nav,
+    NavItem,
+    SubNav,
+    SubNavItem,
+    Wrapper,
 } from './styles';
 
 const Header = () => {
@@ -83,6 +83,8 @@ const Header = () => {
                   onMouseLeave={() => setHoveredItem(null)}
                 >
                   <SubNavItem href="#programs">Career Accelerator Program</SubNavItem>
+                  <SubNavItem href="#programs">Mock Interviews & Prep Guides</SubNavItem>
+                  <SubNavItem href="#programs">Hackathons</SubNavItem>
                 </SubNav>
               )}
 
