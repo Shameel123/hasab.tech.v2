@@ -32,7 +32,7 @@ const programs = [
   {
     title: "Hackathons",
     description: "Compete, collaborate, and showcase your skills.",
-    status: "Planned",
+    status: "Coming Soon",
     icon: "💡",
     link: "#"
   },
