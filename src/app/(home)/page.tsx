@@ -7,8 +7,10 @@ import {
   Registrations,
 } from '@/components';
 import About from '@/components/UI/About';
+import Contribute from '@/components/UI/Contribute';
 import HasabTechEducation from '@/components/UI/HasabTechEducation';
 import MeetTheTeam from '@/components/UI/MeetTheTeam';
+import ResourcesSection from '@/components/UI/Resources';
 import ServicesSection from '@/components/UI/Services';
 
 export default function Home() {
@@ -22,6 +24,8 @@ export default function Home() {
       <ProgramsSection />
       <FinancilaFreedom />
       <Registrations />
+      <ResourcesSection />
+      <Contribute />
       <MeetTheTeam />
       <FAQ />
       {/* <JoinCommunity /> */}
