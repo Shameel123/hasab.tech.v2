@@ -1,18 +1,22 @@
 'use client';
 import MaskText from '@/components/Common/MaskText';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useIsMobile } from '../../../../libs/useIsMobile';
 import {
-  desktopHeaderPhrases,
-  desktopParagraphPhrase,
-  mobileParagraphPhrase,
+    desktopHeaderPhrases,
+    desktopParagraphPhrase,
+    mobileParagraphPhrase,
 } from './constants';
 import {
-  Header,
-  Inner,
-  ProgramCard,
-  ProgramsGrid,
-  Wrapper,
+    Header,
+    Inner,
+    ProgramCard,
+    ProgramsGrid,
+    ToastClose,
+    ToastContainer,
+    ToastIcon,
+    ToastMessage,
+    Wrapper,
 } from './styles';
 
 const programs = [
@@ -44,29 +48,50 @@ const programs = [
 
 const ProgramsSection = () => {
   const isMobile = useIsMobile();
+  const [showToast, setShowToast] = useState(false);
+
+  useEffect(() => {
+    if (showToast) {
+      const timer = setTimeout(() => {
+        setShowToast(false);
+      }, 4000); // Auto-dismiss after 4 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [showToast]);
+
+  const handleShowToast = () => {
+    setShowToast(true);
+  };
+
+  const handleCloseToast = () => {
+    setShowToast(false);
+  };
+
   return (
-    <Wrapper id='programs'>
-      <Inner>
-        <Header>
-          <MaskText phrases={desktopHeaderPhrases} tag="h1" />
+    <>
+      <Wrapper id='programs'>
+        <Inner>
+          <Header>
+            <MaskText phrases={desktopHeaderPhrases} tag="h1" />
 
-          {isMobile ? (
-            <MaskText phrases={mobileParagraphPhrase} tag="p" />
-          ) : (
-            <MaskText phrases={desktopParagraphPhrase} tag="p" />
-          )}
-        </Header>
+            {isMobile ? (
+              <MaskText phrases={mobileParagraphPhrase} tag="p" />
+            ) : (
+              <MaskText phrases={desktopParagraphPhrase} tag="p" />
+            )}
+          </Header>
 
-        <ProgramsGrid>
-          {programs.map((program, index) => {
-            const isExternal = program.link?.startsWith('http');
-            
-            const handleCardClick = (e: React.MouseEvent) => {
-              if (program.isComingSoon) {
-                e.preventDefault();
-                alert("The following program will be launched soon, please stay tuned!");
-              }
-            };
+          <ProgramsGrid>
+            {programs.map((program, index) => {
+              const isExternal = program.link?.startsWith('http');
+              
+              const handleCardClick = (e: React.MouseEvent) => {
+                if (program.isComingSoon) {
+                  e.preventDefault();
+                  handleShowToast();
+                }
+              };
 
             if (program.isComingSoon) {
               return (
@@ -141,6 +166,13 @@ const ProgramsSection = () => {
         </ProgramsGrid>
       </Inner>
     </Wrapper>
+
+    <ToastContainer $show={showToast}>
+      <ToastIcon>⏳</ToastIcon>
+      <ToastMessage>The following program will be launched soon, please stay tuned!</ToastMessage>
+      <ToastClose onClick={handleCloseToast} aria-label="Close toast" />
+    </ToastContainer>
+    </>
   );
 };
 

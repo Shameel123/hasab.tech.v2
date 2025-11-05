@@ -331,3 +331,77 @@ export const ProgramCard = styled.div`
     color: #fff;
   }
 `;
+
+export const ToastContainer = styled.div<{ $show: boolean }>`
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(${props => props.$show ? '0' : '150%'});
+  z-index: 10000;
+  background: linear-gradient(135deg, rgba(27, 38, 59, 0.5) 0%, rgba(61, 84, 107, 0.54) 50%, rgba(33, 58, 85, 0.44) 100%);
+  border: 1px solid #2c3e50;
+  border-radius: 12px;
+  padding: 1.25rem 1.75rem;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 320px;
+  max-width: 90%;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s ease;
+  opacity: ${props => props.$show ? 1 : 0};
+  pointer-events: ${props => props.$show ? 'auto' : 'none'};
+
+  @media (max-width: 768px) {
+    bottom: 1.5rem;
+    padding: 1rem 1.25rem;
+    min-width: 280px;
+  }
+`;
+
+export const ToastIcon = styled.div`
+  font-size: 1.5rem;
+  flex-shrink: 0;
+`;
+
+export const ToastMessage = styled.p`
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+`;
+
+export const ToastClose = styled.button`
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::before {
+    content: '×';
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+`;
