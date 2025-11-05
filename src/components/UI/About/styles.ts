@@ -24,7 +24,7 @@ export const AboutContent = styled.div`
   z-index: 2;
 
   @media (max-width: 768px) {
-    max-width: 100%;
+    max-width: 100%; 
   }
 `;
 
@@ -62,7 +62,7 @@ export const QuotationMark = styled.div`
 `;
 
 export const AboutText = styled.p`
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 300;
   line-height: 1.4;
   color: #BDBDBD;
@@ -73,18 +73,18 @@ export const AboutText = styled.p`
   margin-top: 1rem;
 
   @media (max-width: 1024px) {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     padding-left: 2.5rem;
   }
 
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 1.75rem;
     padding-left: 2rem;
     line-height: 1.5;
   }
 
   @media (max-width: 480px) {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     padding-left: 1.5rem;
     line-height: 1.6;
   }
