@@ -9,6 +9,7 @@ import {
 import About from '@/components/UI/About';
 import HasabTechEducation from '@/components/UI/HasabTechEducation';
 import MeetTheTeam from '@/components/UI/MeetTheTeam';
+import ServicesSection from '@/components/UI/Services';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <HeroSection />
       <Featured />
       <About />
+      <ServicesSection />
       <HasabTechEducation />
       <ProgramsSection />
       <FinancilaFreedom />
