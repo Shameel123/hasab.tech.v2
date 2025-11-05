@@ -9,15 +9,15 @@ import logo_white from '../../../../public/images/logos/logo-white.gif';
 import ic_bars from '../../../../public/svgs/ic_bars.svg';
 import { links, menu } from './constants';
 import {
-    BurgerMenu,
-    CallToActions,
-    Inner,
-    LogoContainer,
-    Nav,
-    NavItem,
-    SubNav,
-    SubNavItem,
-    Wrapper,
+  BurgerMenu,
+  CallToActions,
+  Inner,
+  LogoContainer,
+  Nav,
+  NavItem,
+  SubNav,
+  SubNavItem,
+  Wrapper,
 } from './styles';
 
 const Header = () => {
@@ -93,7 +93,7 @@ const Header = () => {
                   onMouseEnter={() => setHoveredItem('Community')}
                   onMouseLeave={() => setHoveredItem(null)}
                 >
-                  <SubNavItem href="#events">Events</SubNavItem>
+                  {/* <SubNavItem href="#events">Events</SubNavItem> */}
                   <SubNavItem href="#discord">Discord</SubNavItem>
                   <SubNavItem href="#whatsapp">WhatsApp</SubNavItem>
                 </SubNav>
