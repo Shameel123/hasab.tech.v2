@@ -1,11 +1,11 @@
-import land_a_job from '../../../../public/images/land_a_job.svg';
 import choose_your_pathway from '../../../../public/images/choose_your_pathway.svg';
-import not_just_theory from '../../../../public/images/not_just_theory.svg';
+import land_a_job from '../../../../public/images/land_a_job.svg';
 import much_more from '../../../../public/images/much_more.svg';
+import not_just_theory from '../../../../public/images/not_just_theory.svg';
 // For desktop
 export const desktopHeaderPhrases = [
-  'Elevate Your Tech',
-  'Career with hasabTech',
+  'Elevate Your Tech Career',
+  'With Our Programs',
 ];
 export const desktopParagraphPhrase = [
   'We have started different programs under the umbrella of',
