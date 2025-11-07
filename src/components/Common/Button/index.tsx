@@ -1,4 +1,4 @@
-import { LinkTo } from './styles';
+import { LinkTo, ScrollLinkButton } from './styles';
 
 interface ButtonProps {
   text: string;
@@ -8,6 +8,25 @@ interface ButtonProps {
 }
 
 const Button = ({ padding, text, link, openInNewTab}: ButtonProps) => {
+  // If it's a hash link and not opening in new tab, use smooth scroll
+  const isHashLink = link.startsWith('#') && !openInNewTab;
+  
+  if (isHashLink) {
+    return (
+      <ScrollLinkButton
+        to={link.replace('#', '')}
+        smooth={true}
+        offset={-10}
+        duration={600}
+        style={{
+          padding: padding,
+        }}
+      >
+        {text}
+      </ScrollLinkButton>
+    );
+  }
+
   return (
     <LinkTo
       style={{

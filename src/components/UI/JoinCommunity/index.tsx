@@ -1,21 +1,21 @@
 'use client';
 import {
+  Buttons,
   CommunitySection,
   Heading,
-  SubText,
-  Buttons,
+  IconWrapper,
   JoinButton,
-  IconWrapper
+  SubText
 } from './styles';
 
 const JoinCommunity = () => {
   return (
-    <CommunitySection>
+    <CommunitySection id="community">
       <Heading>Join Our Community</Heading>
       <SubText>Connect, learn, and grow with us on WhatsApp & Discord.</SubText>
       <Buttons>
         <JoinButton
-          href="https://chat.whatsapp.com/DvWWIkt6OWBGBrzTfMR12k"
+          href="https://chat.whatsapp.com/LZ0CuvnovXnHF7xhwd9poD?mode=wwt"
           target="_blank"
           color="#25D366"
         >
@@ -34,7 +34,7 @@ const JoinCommunity = () => {
         </JoinButton>
 
         <JoinButton
-          href="https://discord.gg/AdTpmU3G"
+          href="https://discord.gg/NEAymRPP"
           target="_blank"
           color="#5865F2"
         >

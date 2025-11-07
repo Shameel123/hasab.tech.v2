@@ -3,13 +3,15 @@ import {
   Featured,
   FinancilaFreedom,
   HeroSection,
-  Registrations,
   ProgramsSection,
+  Registrations,
 } from '@/components';
-import TopMarqueeBar from '@/components/Common/TopMarqueeBar';
 import About from '@/components/UI/About';
-import JoinCommunity from '@/components/UI/JoinCommunity';
+import Contribute from '@/components/UI/Contribute';
+import HasabTechEducation from '@/components/UI/HasabTechEducation';
 import MeetTheTeam from '@/components/UI/MeetTheTeam';
+import ResourcesSection from '@/components/UI/Resources';
+import ServicesSection from '@/components/UI/Services';
 
 export default function Home() {
   return (
@@ -17,9 +19,13 @@ export default function Home() {
       <HeroSection />
       <Featured />
       <About />
+      <ServicesSection />
+      <HasabTechEducation />
       <ProgramsSection />
       <FinancilaFreedom />
       <Registrations />
+      <ResourcesSection />
+      <Contribute />
       <MeetTheTeam />
       <FAQ />
       {/* <JoinCommunity /> */}

@@ -1,14 +1,11 @@
 'use client';
-import Image from 'next/image';
-import { Edge, Edges, Title } from '../CareerAccelerator/styles';
-import {
-  Wrapper,
-  Inner,
-  Header,
-  HeaderMainText,
-} from './styles';
 import { MaskText } from '@/components';
+import Button from '@/components/Common/Button';
+import Image from 'next/image';
 import { useIsMobile } from '../../../../libs/useIsMobile';
+import { Edge, Edges, Title } from '../CareerAccelerator/styles';
+import Folder from '../Folder';
+import { SecondaryCTA } from '../HasabTechEducation/styles';
 import {
   desktopHeaderPhrase,
   desktopParagraphPhrase,
@@ -16,8 +13,12 @@ import {
   mobileHeaderPhrase,
   mobileParagraphPhrase,
 } from './constants';
-import Folder from '../Folder';
-import Button from '@/components/Common/Button';
+import {
+  Header,
+  HeaderMainText,
+  Inner,
+  Wrapper,
+} from './styles';
 
 const Registrations = () => {
   const isMobile = useIsMobile();
@@ -55,8 +56,22 @@ const Registrations = () => {
             </Edge>
           ))}
         </Edges>
-        <div style={{marginTop: '2rem'}}>
-          <Button padding="1rem 2rem" text={'I want to register!'} link={'https://forms.gle/kE3L55e7zsN1VZ3j9'} openInNewTab />
+        <div
+          style={{
+            marginTop: '2rem',
+            display: 'flex',
+            gap: '1rem',
+            flexWrap: 'wrap',
+            justifyContent: 'center'
+          }}
+        >
+          <Button
+            padding="1rem 2rem"
+            text={'I want to register!'}
+            link={'https://forms.gle/kE3L55e7zsN1VZ3j9'}
+            openInNewTab
+          />
+          <SecondaryCTA href="https://accelerator.hasab.tech/" target="_blank" rel="noopener noreferrer">Learn More</SecondaryCTA>
         </div>
       </Inner>
     </Wrapper>

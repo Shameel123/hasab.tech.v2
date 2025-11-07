@@ -5,7 +5,7 @@ import Button from '@/components/Common/Button';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
-import logo_white from '../../../../public/images/hasabtech-education-logo.png';
+import logo_white from '../../../../public/images/logos/logo-white.gif';
 import ic_bars from '../../../../public/svgs/ic_bars.svg';
 import { links, menu } from './constants';
 import {
@@ -17,6 +17,7 @@ import {
   NavItem,
   SubNav,
   SubNavItem,
+  SubNavItemExternal,
   Wrapper,
 } from './styles';
 
@@ -74,6 +75,7 @@ const Header = () => {
                   title={link.linkTo}
                   href={link.url}
                   onClick={closeMenu}
+                  offset={link.linkTo === 'FAQs' ? -100 : undefined}
                 />
               </div>
 
@@ -82,7 +84,17 @@ const Header = () => {
                   onMouseEnter={() => setHoveredItem('Programs')}
                   onMouseLeave={() => setHoveredItem(null)}
                 >
-                  <SubNavItem href="#programs">Career Accelerator Program</SubNavItem>
+                  <SubNavItem 
+                    to="programs"
+                    smooth={true}
+                    offset={-190}
+                    duration={600}
+                    onClick={() => setHoveredItem(null)}
+                  >
+                    Career Accelerator Program
+                  </SubNavItem>
+                  {/* <SubNavItem to="programs" smooth={true} offset={-190} duration={600}>Mock Interviews & Prep Guides</SubNavItem> */}
+                  {/* <SubNavItem to="programs" smooth={true} offset={-190} duration={600}>Hackathons</SubNavItem> */}
                 </SubNav>
               )}
 
@@ -91,9 +103,23 @@ const Header = () => {
                   onMouseEnter={() => setHoveredItem('Community')}
                   onMouseLeave={() => setHoveredItem(null)}
                 >
-                  <SubNavItem href="#events">Events</SubNavItem>
-                  <SubNavItem href="#discord">Discord</SubNavItem>
-                  <SubNavItem href="#whatsapp">WhatsApp</SubNavItem>
+                  {/* <SubNavItem to="events" smooth={true} offset={-190} duration={600}>Events</SubNavItem> */}
+                  <SubNavItemExternal
+                    href="https://discord.gg/NEAymRPP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setHoveredItem(null)}
+                  >
+                    Discord
+                  </SubNavItemExternal>
+                  <SubNavItemExternal
+                    href="https://chat.whatsapp.com/LZ0CuvnovXnHF7xhwd9poD?mode=wwt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setHoveredItem(null)}
+                  >
+                    WhatsApp
+                  </SubNavItemExternal>
                 </SubNav>
               )}
 
@@ -102,15 +128,29 @@ const Header = () => {
                   onMouseEnter={() => setHoveredItem('Resources')}
                   onMouseLeave={() => setHoveredItem(null)}
                 >
-                  <SubNavItem href="#blogs">Blogs</SubNavItem>
-                  <SubNavItem href="#youtube">Youtube</SubNavItem>
+                  <SubNavItemExternal
+                    href="https://hashnode.com/@hasabtech"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setHoveredItem(null)}
+                  >
+                    Blogs
+                  </SubNavItemExternal>
+                  <SubNavItemExternal
+                    href="https://www.youtube.com/@hasabTech"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setHoveredItem(null)}
+                  >
+                    Youtube
+                  </SubNavItemExternal>
                 </SubNav>
               )}
             </NavItem>
           ))}
         </Nav>
         <CallToActions className={isOpen ? 'active' : ''}>
-          <Button padding="0.5rem 0.75rem" text={'Get Involved!'} link={'https://forms.gle/kE3L55e7zsN1VZ3j9'} openInNewTab />
+          <Button padding="0.5rem 0.75rem" text={'Get Involved!'} link={'#contribute'} />
         </CallToActions>
       </Inner>
     </Wrapper>

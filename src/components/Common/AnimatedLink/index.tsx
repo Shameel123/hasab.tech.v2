@@ -63,9 +63,10 @@ type AnimatedLinkProps = {
   href: string;
   onClick?: () => void; // ✅ For closing the menu on mobile or custom handling
   disableNavigation?: boolean; // ✅ If true, render as a non-link for custom click behavior
+  offset?: number; // ✅ Optional custom scroll offset
 };
 
-const AnimatedLink = ({ title, href, onClick, disableNavigation }: AnimatedLinkProps) => {
+const AnimatedLink = ({ title, href, onClick, disableNavigation, offset = -190 }: AnimatedLinkProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   if (disableNavigation) {
@@ -100,7 +101,7 @@ const AnimatedLink = ({ title, href, onClick, disableNavigation }: AnimatedLinkP
     <ScrollLink
       to={href.replace('#', '')} // Remove '#' for react-scroll
       smooth={true}
-      offset={-190} // ✅ Adjust for fixed navbar height
+      offset={offset} // ✅ Adjust for fixed navbar height (default -190)
       duration={600} // ✅ Smooth scroll duration in ms
       spy={true}
       className="cursor-pointer"

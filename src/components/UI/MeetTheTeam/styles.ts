@@ -2,7 +2,6 @@
 import { styled } from 'styled-components';
 
 export const Wrapper = styled.section`
-  margin-top: 8.56rem;
   background: var(--primaryOrange);
 `;
 

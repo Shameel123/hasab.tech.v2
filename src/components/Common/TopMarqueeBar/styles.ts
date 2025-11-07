@@ -1,5 +1,5 @@
 'use client';
-import { styled, keyframes } from 'styled-components';
+import { keyframes, styled } from 'styled-components';
 
 // Keyframes for scrolling animation
 const marqueeScroll = keyframes`
@@ -33,6 +33,10 @@ export const Marquee = styled.div`
   font-size: 1rem;
   font-weight: 500;
   padding: 0.5rem 0;
+
+  ${Wrapper}:hover & {
+    animation-play-state: paused;
+  }
 
   span {
     margin: 0 2rem;

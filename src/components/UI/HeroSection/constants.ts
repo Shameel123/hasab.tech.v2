@@ -1,13 +1,13 @@
 // For desktop
-export const phrases = ['Empowering the next', 'wave of tech talent.'];
+export const phrases = ['Innovating in Code,', 'Investing in People.'];
 export const paragraphPhrases = [
-  "Career accelerator programs, hackathons, interview preps,",
-  'expert-led mentorships, and much more!',
+  "We’re a small software company with a big mission.",
+  'We deliver software solutions and train the next generation of developers through our EdTech initiative, hasabTech Education.',
 ];
 
 // For mobile
-export const mobilePhrases = ['Empowering the', 'next wave of tech talent'];
+export const mobilePhrases = ['Innovating in Code,', 'Investing in People.'];
 export const mobileParagraphPhrases = [
-  "Career accelerator programs, hackathons,",
-  'interview preps, expert-led mentorships, and much more!',
+  "We’re a small software company with a big mission.",
+  'We provide software services and train the next generation of developers through our EdTech initiative, hasabTech Education.',
 ];

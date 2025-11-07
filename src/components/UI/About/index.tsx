@@ -1,5 +1,5 @@
 'use client';
-import { AboutWrapper, AboutContent, QuotationMark, AboutText } from './styles';
+import { AboutContent, AboutText, AboutWrapper, QuotationMark } from './styles';
 
 const About = () => {
   return (
@@ -7,11 +7,9 @@ const About = () => {
       <AboutContent>
         <QuotationMark>"</QuotationMark>
         <AboutText>
-        <span style={{color: 'var(--primaryOrange)'}} id="about">hasabTech Education</span> is our commitment to strengthening the tech community by sharing the skills,
-        knowledge, and experience we’ve gained over the years.<br></br><br></br>This is a <span style={{color: 'var(--primaryOrange)'}}>non-profit</span> initiative by hasabTech
-        dedicated to giving back to the tech community. Our <span style={{color: 'var(--primaryOrange)'}}> mission</span> is simple: Make <span style={{color: 'var(--primaryOrange)'}}>high quality tech education </span>
-        accessible to everyone regardless of background and strengthen the community by helping <span style={{color: 'var(--primaryOrange)'}}>learners become
-        contributors</span> themselves.
+          <span style={{color: 'var(--primaryOrange)'}} id="about">hasabTech</span> a small but ambitious software studio focused on building meaningful digital products and scalable solutions along with giving back to the tech community. 
+          <br></br><br></br> We’re a tight-knit team of 3–4 developers, designers, and <span style={{color: 'var(--primaryOrange)'}}>dreamers</span> working from different parts of Pakistan, united by one goal: to build <span style={{color: 'var(--primaryOrange)'}}>impactful software</span> and give back to the tech community in every way we can.
+          <br></br><br></br> We believe in learning, building, and <span style={{color: 'var(--primaryOrange)'}}>growing together</span>.
         </AboutText>
       </AboutContent>
     </AboutWrapper>
