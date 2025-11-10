@@ -15,6 +15,11 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+
+  @media (max-width: 620px) {
+    align-items: center; /* center vertically on mobile */
+    justify-content: center; /* center horizontally on mobile */
+  }
 `;
 
 export const Inner = styled.div`
@@ -60,11 +65,12 @@ export const Inner = styled.div`
     display: flex;
     align-items: center;
     height: fit-content;
-    margin-bottom: 20rem;
+    margin-bottom: 0rem;
+    padding: 0 1rem;
     
     img {
-      width: 3rem;
-      height: 3rem;
+      width: 2.5rem;
+      height: 2.5rem;
     }
 
     div {

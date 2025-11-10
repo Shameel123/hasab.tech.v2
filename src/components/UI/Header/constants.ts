@@ -2,8 +2,9 @@ export const menu = {
   open: {
     width: '100vw',
     height: '100vh',
-    top: '-2.2rem',
-    marginRight: '-1.2rem',
+    top: '-1.71rem',
+    borderRadius: '0',
+    marginRight: '-1rem',
     right: 0,
     opacity: 1,
     transition: { duration: 0.6, type: 'tween', ease: [0.76, 0, 0.24, 1] },
@@ -15,6 +16,7 @@ export const menu = {
     top: '-1rem',
     right: '-4px',
     opacity: 0.9,
+    borderRadius: '20px',
     marginRight: '0.1rem',
     transition: {
       duration: 0.6,

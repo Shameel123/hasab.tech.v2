@@ -37,6 +37,9 @@ export const Header = styled.header`
   }
 
   @media (max-width: 768px) {
+
+    margin: 0 auto 3rem;
+
     h1 {
       font-size: 2.25rem;
     }
@@ -69,7 +72,7 @@ export const ImageCtn = styled.div`
   }
 
   @media (max-width: 768px) {
-    margin: 0.32rem auto 0;
+    margin: -1.5rem auto -4rem auto;
 
     &::after {
       top: 30px;
@@ -130,7 +133,7 @@ export const Offers = styled.div`
       }
 
       ${TextCtn} {
-        margin-top: -2rem;
+        margin-top: -3rem;
         height: 1em;
         flex: 1;
       }
@@ -157,21 +160,26 @@ export const Offers = styled.div`
     flex-direction: column;
 
     &:last-child {
-      div:first-child {
+      
+    div:first-child {
         flex: 1;
 
         ${ImageCtn} {
           flex: 1;
+           margin-top: -1.5rem;
+        }
+        ${TextCtn} {
+          margin-top: 0rem;
         }
       }
 
       div:last-child {
         flex: 1;
-        
 
         ${ImageCtn} {
           flex: 1;
           margin-left: auto;
+          margin-top: -2.5rem;
         }
       }
     }

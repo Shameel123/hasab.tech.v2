@@ -1,11 +1,12 @@
 'use client';
-import { Card, CardDescription, CardIcon, Cards, CardTitle, Description, Heading, Inner, Wrapper } from './styles';
+import MaskText from '@/components/Common/MaskText';
+import { Card, CardDescription, CardIcon, Cards, CardTitle, Description, Inner, Wrapper } from './styles';
 
 const ResourcesSection = () => {
   return (
     <Wrapper id="resources">
       <Inner>
-        <Heading>Our Resources</Heading>
+        <MaskText phrases={['Our Resources']} tag="h1" />
         <Description>
           We share what we already know and what we are learning.
         </Description>

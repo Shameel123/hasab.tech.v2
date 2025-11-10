@@ -5,6 +5,7 @@ import Button from '@/components/Common/Button';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useIsMobile } from '../../../../libs/useIsMobile';
 import logo_white from '../../../../public/images/logos/logo-white.gif';
 import ic_bars from '../../../../public/svgs/ic_bars.svg';
 import { links, menu } from './constants';
@@ -16,17 +17,25 @@ import {
   Nav,
   NavItem,
   SubNav,
-  SubNavItem,
   SubNavItemExternal,
-  Wrapper,
+  Wrapper
 } from './styles';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [openSubNav, setOpenSubNav] = useState<string | null>(null);
+  const isMobile = useIsMobile();
   
   const closeMenu = () => {
     setIsOpen(false);
+    setOpenSubNav(null);
+  };
+
+  const toggleSubNav = (linkTo: string) => {
+    if (isMobile) {
+      setOpenSubNav(openSubNav === linkTo ? null : linkTo);
+    }
   };
 
   const handleLinkClick = (href: any) => {
@@ -63,91 +72,121 @@ const Header = () => {
         <Nav
           className={isOpen ? 'active' : ''}
         >
-          {links.map((link, i) => (
-            <NavItem
-              key={i}
-              className={hoveredItem === link.linkTo ? 'active' : ''}
-              onMouseEnter={() => setHoveredItem(link.linkTo)}
-              onMouseLeave={() => setHoveredItem(null)}
-            >
-              <div onClick={() => handleLinkClick(link.url)}>
-                <AnimatedLink
-                  title={link.linkTo}
-                  href={link.url}
-                  onClick={closeMenu}
-                  offset={link.linkTo === 'FAQs' ? -100 : undefined}
-                />
-              </div>
+          {links.map((link, i) => {
+            const hasSubNav = ['Programs', 'Community', 'Resources'].includes(link.linkTo);
+            const isSubNavVisible = isMobile 
+              ? openSubNav === link.linkTo 
+              : hoveredItem === link.linkTo;
 
-              {link.linkTo === 'Programs' && hoveredItem === 'Programs' && (
-                <SubNav
-                  onMouseEnter={() => setHoveredItem('Programs')}
-                  onMouseLeave={() => setHoveredItem(null)}
-                >
-                  <SubNavItem 
-                    to="programs"
-                    smooth={true}
-                    offset={-190}
-                    duration={600}
-                    onClick={() => setHoveredItem(null)}
-                  >
-                    Career Accelerator Program
-                  </SubNavItem>
-                  {/* <SubNavItem to="programs" smooth={true} offset={-190} duration={600}>Mock Interviews & Prep Guides</SubNavItem> */}
-                  {/* <SubNavItem to="programs" smooth={true} offset={-190} duration={600}>Hackathons</SubNavItem> */}
-                </SubNav>
-              )}
+            return (
+              <NavItem
+                key={i}
+                className={hoveredItem === link.linkTo || openSubNav === link.linkTo ? 'active' : ''}
+                onMouseEnter={() => !isMobile && setHoveredItem(link.linkTo)}
+                onMouseLeave={() => !isMobile && setHoveredItem(null)}
+              >
+                <div>
+                  <AnimatedLink
+                    title={link.linkTo}
+                    href={link.url}
+                    disableNavigation={hasSubNav && isMobile}
+                    onClick={hasSubNav && isMobile ? () => toggleSubNav(link.linkTo) : closeMenu}
+                    offset={link.linkTo === 'FAQs' ? -100 : undefined}
+                  />
+                </div>
 
-              {link.linkTo === 'Community' && hoveredItem === 'Community' && (
-                <SubNav
-                  onMouseEnter={() => setHoveredItem('Community')}
-                  onMouseLeave={() => setHoveredItem(null)}
-                >
-                  {/* <SubNavItem to="events" smooth={true} offset={-190} duration={600}>Events</SubNavItem> */}
-                  <SubNavItemExternal
-                    href="https://discord.gg/NEAymRPP"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setHoveredItem(null)}
+                {link.linkTo === 'Programs' && isSubNavVisible && (
+                  <SubNav
+                    className={isMobile ? 'mobile-open' : ''}
+                    onMouseEnter={() => !isMobile && setHoveredItem('Programs')}
+                    onMouseLeave={() => !isMobile && setHoveredItem(null)}
                   >
-                    Discord
-                  </SubNavItemExternal>
-                  <SubNavItemExternal
-                    href="https://chat.whatsapp.com/LZ0CuvnovXnHF7xhwd9poD?mode=wwt"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setHoveredItem(null)}
-                  >
-                    WhatsApp
-                  </SubNavItemExternal>
-                </SubNav>
-              )}
+                    <SubNavItemExternal
+                      href="https://accelerator.hasab.tech/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        setHoveredItem(null);
+                        setOpenSubNav(null);
+                        closeMenu();
+                      }}
+                    >
+                      Career Accelerator Program
+                    </SubNavItemExternal>
+                    {/* <SubNavItem to="programs" smooth={true} offset={-190} duration={600}>Mock Interviews & Prep Guides</SubNavItem> */}
+                    {/* <SubNavItem to="programs" smooth={true} offset={-190} duration={600}>Hackathons</SubNavItem> */}
+                  </SubNav>
+                )}
 
-              {link.linkTo === 'Resources' && hoveredItem === 'Resources' && (
-                <SubNav
-                  onMouseEnter={() => setHoveredItem('Resources')}
-                  onMouseLeave={() => setHoveredItem(null)}
-                >
-                  <SubNavItemExternal
-                    href="https://hashnode.com/@hasabtech"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setHoveredItem(null)}
+                {link.linkTo === 'Community' && isSubNavVisible && (
+                  <SubNav
+                    className={isMobile ? 'mobile-open' : ''}
+                    onMouseEnter={() => !isMobile && setHoveredItem('Community')}
+                    onMouseLeave={() => !isMobile && setHoveredItem(null)}
                   >
-                    Blogs
-                  </SubNavItemExternal>
-                  <SubNavItemExternal
-                    href="https://www.youtube.com/@hasabTech"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setHoveredItem(null)}
+                    {/* <SubNavItem to="events" smooth={true} offset={-190} duration={600}>Events</SubNavItem> */}
+                    <SubNavItemExternal
+                      href="https://discord.gg/NEAymRPP"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        setHoveredItem(null);
+                        setOpenSubNav(null);
+                        closeMenu();
+                      }}
+                    >
+                      Discord
+                    </SubNavItemExternal>
+                    <SubNavItemExternal
+                      href="https://chat.whatsapp.com/LZ0CuvnovXnHF7xhwd9poD?mode=wwt"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        setHoveredItem(null);
+                        setOpenSubNav(null);
+                        closeMenu();
+                      }}
+                    >
+                      WhatsApp
+                    </SubNavItemExternal>
+                  </SubNav>
+                )}
+
+                {link.linkTo === 'Resources' && isSubNavVisible && (
+                  <SubNav
+                    className={isMobile ? 'mobile-open' : ''}
+                    onMouseEnter={() => !isMobile && setHoveredItem('Resources')}
+                    onMouseLeave={() => !isMobile && setHoveredItem(null)}
                   >
-                    Youtube
-                  </SubNavItemExternal>
-                </SubNav>
-              )}
-            </NavItem>
-          ))}
+                    <SubNavItemExternal
+                      href="https://hashnode.com/@hasabtech"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        setHoveredItem(null);
+                        setOpenSubNav(null);
+                        closeMenu();
+                      }}
+                    >
+                      Blogs
+                    </SubNavItemExternal>
+                    <SubNavItemExternal
+                      href="https://www.youtube.com/@hasabTech"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        setHoveredItem(null);
+                        setOpenSubNav(null);
+                        closeMenu();
+                      }}
+                    >
+                      Youtube
+                    </SubNavItemExternal>
+                  </SubNav>
+                )}
+              </NavItem>
+            );
+          })}
         </Nav>
         <CallToActions className={isOpen ? 'active' : ''}>
           <Button padding="0.5rem 0.75rem" text={'Get Involved!'} link={'#contribute'} />

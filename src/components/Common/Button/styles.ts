@@ -32,6 +32,11 @@ export const LinkTo = styled(Link)`
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(250, 138, 78, 0.35);
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 200px;
+  }
 `;
 
 export const ScrollLinkButton = styled(ScrollLink)`
@@ -51,5 +56,10 @@ export const ScrollLinkButton = styled(ScrollLink)`
     background:rgb(250, 138, 78);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(250, 138, 78, 0.35);
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    max-width: 300px;
   }
 `;

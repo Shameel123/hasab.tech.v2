@@ -14,6 +14,10 @@ export const Inner = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 3rem 0 4rem 0;
+  }
 `;
 
 export const Header = styled.header`
@@ -29,7 +33,7 @@ export const Header = styled.header`
   @media (max-width: 768px) {
     margin-bottom: 2.5rem;
     h1 {
-      font-size: 2rem;
+      font-size: 2.25rem;
     }
   }
 `;

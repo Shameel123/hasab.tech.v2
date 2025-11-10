@@ -52,7 +52,7 @@ const ServicesSection = () => {
   const isMobile = useIsMobile();
   return (
     <Wrapper>
-      <Inner style={{ marginTop: '7.5rem', marginBottom: '12rem' }}>
+      <Inner style={{ marginTop: '7.5rem', marginBottom: isMobile ? '6rem' : '12rem' }}>
         <Header>
           <MaskText phrases={["Services We Provide"]} tag="h1" />
           {isMobile ? (

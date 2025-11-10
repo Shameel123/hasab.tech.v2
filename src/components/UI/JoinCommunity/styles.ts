@@ -49,6 +49,13 @@ export const JoinButton = styled.a<{ color: string }>`
     height: 24px;
     fill: #fff;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
 `;
 
 export const IconWrapper = styled.span`

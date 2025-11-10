@@ -52,22 +52,19 @@ export const BurgerMenu = styled.div`
     div {
       position: absolute;
       background: var(--primaryOrange);
-      width: '250px';
-      height: '300px';
-      border-radius: 20px;
+      width: 250px;
+      height: 300px;
       z-index: 1;
       top: 50px;
     }
 
     img {
       position: absolute;
-      top: 50%
-      right: 50%;
+      top: 50%;
+      right: -70%;
       transform: translate(-75%, -65%);
       z-index: 30;
       object-fit: cover;
-      z-index: 30;
-
     }
   }
 `;
@@ -134,6 +131,11 @@ export const NavItem = styled.div`
   padding: 0.35rem 0.5rem;
   border-radius: 8px;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
 
   &.active {
     background: rgba(255, 255, 255, 0.08);
@@ -154,7 +156,17 @@ export const SubNav = styled.div`
   z-index: 20000;
 
   @media (max-width: 768px) {
+    position: static;
     display: none;
+    width: 100%;
+    margin-top: 0.5rem;
+    min-width: auto;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    &.mobile-open {
+      display: block;
+    }
   }
 `;
 
@@ -171,6 +183,10 @@ export const SubNavItem = styled(ScrollLink)`
   &:hover {
     background: rgba(255, 255, 255, 0.06);
   }
+
+  @media (max-width: 768px) {
+    color: var(--primaryBlue) !important;
+  }
 `;
 
 export const SubNavItemExternal = styled.a`
@@ -185,6 +201,10 @@ export const SubNavItemExternal = styled.a`
 
   &:hover {
     background: rgba(255, 255, 255, 0.06);
+  }
+
+  @media (max-width: 768px) {
+    color: var(--primaryBlue) !important;
   }
 `;
 
