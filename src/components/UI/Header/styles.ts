@@ -52,22 +52,19 @@ export const BurgerMenu = styled.div`
     div {
       position: absolute;
       background: var(--primaryOrange);
-      width: '250px';
-      height: '300px';
-      border-radius: 20px;
+      width: 250px;
+      height: 300px;
       z-index: 1;
       top: 50px;
     }
 
     img {
       position: absolute;
-      top: 50%
-      right: 50%;
+      top: 50%;
+      right: -70%;
       transform: translate(-75%, -65%);
       z-index: 30;
       object-fit: cover;
-      z-index: 30;
-
     }
   }
 `;

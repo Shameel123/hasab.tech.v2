@@ -17,9 +17,8 @@ import {
   Nav,
   NavItem,
   SubNav,
-  SubNavItem,
   SubNavItemExternal,
-  Wrapper,
+  Wrapper
 } from './styles';
 
 const Header = () => {
@@ -102,11 +101,10 @@ const Header = () => {
                     onMouseEnter={() => !isMobile && setHoveredItem('Programs')}
                     onMouseLeave={() => !isMobile && setHoveredItem(null)}
                   >
-                    <SubNavItem 
-                      to="programs"
-                      smooth={true}
-                      offset={-190}
-                      duration={600}
+                    <SubNavItemExternal
+                      href="https://accelerator.hasab.tech/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={() => {
                         setHoveredItem(null);
                         setOpenSubNav(null);
@@ -114,7 +112,7 @@ const Header = () => {
                       }}
                     >
                       Career Accelerator Program
-                    </SubNavItem>
+                    </SubNavItemExternal>
                     {/* <SubNavItem to="programs" smooth={true} offset={-190} duration={600}>Mock Interviews & Prep Guides</SubNavItem> */}
                     {/* <SubNavItem to="programs" smooth={true} offset={-190} duration={600}>Hackathons</SubNavItem> */}
                   </SubNav>

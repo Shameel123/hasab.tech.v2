@@ -41,6 +41,16 @@ export const Inner = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  h1 {
+    font-size: 4.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+      font-size: 2.25rem;
+    }
+  }
 `;
 
 export const Heading = styled.h1`

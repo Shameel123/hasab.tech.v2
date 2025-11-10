@@ -69,6 +69,10 @@ export const Pill = styled.div`
     position: relative;
     z-index: 1;
   }
+
+  @media (max-width: 768px) {
+    margin: 0 1rem 1rem 1rem;
+  }
 `;
 
 export const HeroTextContainer = styled.div`

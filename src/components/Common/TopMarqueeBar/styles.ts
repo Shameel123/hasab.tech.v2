@@ -42,4 +42,13 @@ export const Marquee = styled.div`
     margin: 0 2rem;
     font-weight: 500;
   }
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+    gap: 5rem;
+    
+    span {
+      margin: 0 1rem;
+    }
+  }
 `;

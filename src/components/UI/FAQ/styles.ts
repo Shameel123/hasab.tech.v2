@@ -1,6 +1,6 @@
 'use client';
-import { styled } from 'styled-components';
 import { motion } from 'framer-motion';
+import { styled } from 'styled-components';
 
 export const Wrapper = styled.div`
   padding: 8.25rem 0 10rem;
@@ -25,8 +25,10 @@ export const Inner = styled.div`
   }
 
   @media (max-width: 768px) {
+    gap: 4rem;
+    
     h1 {
-      font-size: 3.75rem;
+      font-size: 2.25rem;
     }
   }
 `;

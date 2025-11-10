@@ -12,7 +12,7 @@ export const AboutWrapper = styled.section`
   position: relative;
 
   @media (max-width: 768px) {
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.5rem 0 1.5rem;
     min-height: 80vh;
   }
 `;
@@ -84,8 +84,8 @@ export const AboutText = styled.p`
   }
 
   @media (max-width: 480px) {
-    font-size: 1.35rem;
-    padding-left: 1.5rem;
+    font-size: 1.1rem;
+    padding-left: 1.3rem;
     line-height: 1.6;
   }
 `;

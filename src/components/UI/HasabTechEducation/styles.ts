@@ -74,7 +74,7 @@ export const Header = styled.div`
     }
 
     @media (max-width: 768px) {
-      font-size: 2.5rem;
+      font-size: 2.25rem;
     }
   }
 `;
@@ -236,6 +236,7 @@ export const SecondaryCTA = styled.a`
 
   @media (max-width: 768px) {
     width: 100%;
+    max-width: 200px;
     padding: 0.75rem 1.5rem;
   }
 `;

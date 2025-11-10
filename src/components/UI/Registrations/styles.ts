@@ -6,7 +6,8 @@ export const Wrapper = styled.section`
   padding-top: 7.5rem;
   margin-bottom: 10rem;
   @media (max-width: 768px) {
-    padding-top: 6rem;
+    padding-top: 1rem;
+    margin-bottom: 5rem;
   }
 `;
 
