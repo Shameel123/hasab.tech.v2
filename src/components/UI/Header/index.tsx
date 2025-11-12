@@ -73,7 +73,7 @@ const Header = () => {
           className={isOpen ? 'active' : ''}
         >
           {links.map((link, i) => {
-            const hasSubNav = ['Programs', 'Community', 'Resources'].includes(link.linkTo);
+            const hasSubNav = ['Community', 'Resources'].includes(link.linkTo);
             const isSubNavVisible = isMobile 
               ? openSubNav === link.linkTo 
               : hoveredItem === link.linkTo;
@@ -95,7 +95,7 @@ const Header = () => {
                   />
                 </div>
 
-                {link.linkTo === 'Programs' && isSubNavVisible && (
+                {/* {link.linkTo === 'Programs' && isSubNavVisible && (
                   <SubNav
                     className={isMobile ? 'mobile-open' : ''}
                     onMouseEnter={() => !isMobile && setHoveredItem('Programs')}
@@ -113,10 +113,10 @@ const Header = () => {
                     >
                       Career Accelerator Program
                     </SubNavItemExternal>
-                    {/* <SubNavItem to="programs" smooth={true} offset={-190} duration={600}>Mock Interviews & Prep Guides</SubNavItem> */}
-                    {/* <SubNavItem to="programs" smooth={true} offset={-190} duration={600}>Hackathons</SubNavItem> */}
+                    <SubNavItem to="programs" smooth={true} offset={-190} duration={600}>Mock Interviews & Prep Guides</SubNavItem>
+                    <SubNavItem to="programs" smooth={true} offset={-190} duration={600}>Hackathons</SubNavItem>
                   </SubNav>
-                )}
+                )} */}
 
                 {link.linkTo === 'Community' && isSubNavVisible && (
                   <SubNav

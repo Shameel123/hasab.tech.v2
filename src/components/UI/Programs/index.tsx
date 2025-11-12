@@ -3,20 +3,20 @@ import MaskText from '@/components/Common/MaskText';
 import React, { useEffect, useState } from 'react';
 import { useIsMobile } from '../../../../libs/useIsMobile';
 import {
-    desktopHeaderPhrases,
-    desktopParagraphPhrase,
-    mobileParagraphPhrase,
+  desktopHeaderPhrases,
+  desktopParagraphPhrase,
+  mobileParagraphPhrase,
 } from './constants';
 import {
-    Header,
-    Inner,
-    ProgramCard,
-    ProgramsGrid,
-    ToastClose,
-    ToastContainer,
-    ToastIcon,
-    ToastMessage,
-    Wrapper,
+  Header,
+  Inner,
+  ProgramCard,
+  ProgramsGrid,
+  ToastClose,
+  ToastContainer,
+  ToastIcon,
+  ToastMessage,
+  Wrapper,
 } from './styles';
 
 const programs = [
@@ -97,8 +97,8 @@ const ProgramsSection = () => {
               return (
                 <div
                   key={index}
-                  onClick={handleCardClick}
-                  style={{ textDecoration: 'none', display: 'block', color: 'inherit', cursor: 'pointer' }}
+                  // onClick={handleCardClick}
+                  style={{ textDecoration: 'none', display: 'block', color: 'inherit' }}
                 >
                   <ProgramCard
                     onMouseMove={(e) => {
@@ -129,11 +129,15 @@ const ProgramsSection = () => {
             }
 
             return (
-              <a
+              // <a
+              //   key={index}
+              //   href={program.link}
+              //   target={isExternal ? '_blank' : '_self'}
+              //   rel={isExternal ? 'noopener noreferrer' : undefined}
+              //   style={{ textDecoration: 'none', display: 'block', color: 'inherit' }}
+              // >
+              <div
                 key={index}
-                href={program.link}
-                target={isExternal ? '_blank' : '_self'}
-                rel={isExternal ? 'noopener noreferrer' : undefined}
                 style={{ textDecoration: 'none', display: 'block', color: 'inherit' }}
               >
                 <ProgramCard
@@ -160,7 +164,8 @@ const ProgramsSection = () => {
                     {program.status}
                   </span>
                 </ProgramCard>
-              </a>
+              </div>
+              // </a>
             );
           })}
         </ProgramsGrid>
