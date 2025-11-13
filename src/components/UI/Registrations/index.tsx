@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { useIsMobile } from '../../../../libs/useIsMobile';
 import { Edge, Edges, Title } from '../CareerAccelerator/styles';
 import Folder from '../Folder';
-import { SecondaryCTA } from '../HasabTechEducation/styles';
 import {
   desktopHeaderPhrase,
   desktopParagraphPhrase,
@@ -71,7 +70,7 @@ const Registrations = () => {
             link={'https://forms.gle/kE3L55e7zsN1VZ3j9'}
             openInNewTab
           />
-          <SecondaryCTA href="https://accelerator.hasab.tech/" target="_blank" rel="noopener noreferrer">Learn More</SecondaryCTA>
+          {/* <SecondaryCTA href="https://accelerator.hasab.tech/" target="_blank" rel="noopener noreferrer">Learn More</SecondaryCTA> */}
         </div>
       </Inner>
     </Wrapper>

@@ -25,7 +25,7 @@ const programs = [
     description: "Kickstart your career with structured guidance and mentorship.",
     status: "Active",
     icon: "🚀",
-    link: "https://accelerator.hasab.tech/",
+    // link: "https://accelerator.hasab.tech/",
     isComingSoon: false
   },
   {
