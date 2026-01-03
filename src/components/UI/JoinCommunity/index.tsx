@@ -1,12 +1,12 @@
-'use client';
+"use client";
 import {
   Buttons,
   CommunitySection,
   Heading,
   IconWrapper,
   JoinButton,
-  SubText
-} from './styles';
+  SubText,
+} from "./styles";
 
 const JoinCommunity = () => {
   return (
@@ -34,7 +34,7 @@ const JoinCommunity = () => {
         </JoinButton>
 
         <JoinButton
-          href="https://discord.gg/NEAymRPP"
+          href="https://discord.com/invite/NtUS8nkJ"
           target="_blank"
           color="#5865F2"
         >
