@@ -34,7 +34,7 @@ const JoinCommunity = () => {
         </JoinButton>
 
         <JoinButton
-          href="https://discord.gg/NEAymRPP"
+          href="https://discord.gg/b2Nnvq8XWg"
           target="_blank"
           color="#5865F2"
         >

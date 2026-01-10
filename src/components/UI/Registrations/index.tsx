@@ -67,7 +67,7 @@ const Registrations = () => {
           <Button
             padding="1rem 2rem"
             text={'I want to register!'}
-            link={'https://forms.gle/kE3L55e7zsN1VZ3j9'}
+            link={'https://accelerator.hasab.tech'}
             openInNewTab
           />
           {/* <SecondaryCTA href="https://accelerator.hasab.tech/" target="_blank" rel="noopener noreferrer">Learn More</SecondaryCTA> */}

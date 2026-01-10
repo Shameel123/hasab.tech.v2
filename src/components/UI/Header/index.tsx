@@ -134,7 +134,7 @@ const Header = () => {
                   >
                     {/* <SubNavItem to="events" smooth={true} offset={-190} duration={600}>Events</SubNavItem> */}
                     <SubNavItemExternal
-                      href="https://discord.gg/NtUS8nkJ"
+                      href="https://discord.gg/b2Nnvq8XWg"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => {
@@ -169,7 +169,7 @@ const Header = () => {
                     onMouseLeave={() => !isMobile && setHoveredItem(null)}
                   >
                     <SubNavItemExternal
-                      href="https://hashnode.com/@hasabtech"
+                      href="https://blog.hasab.tech"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => {

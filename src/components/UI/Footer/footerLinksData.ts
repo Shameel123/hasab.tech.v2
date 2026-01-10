@@ -5,7 +5,7 @@ export const footerLinksData = {
       instagram: 'https://www.instagram.com/hasab.tech/',
       youtube: 'https://www.youtube.com/@hasabTech',
       github: 'https://github.com/hasabTech',
-      hashnode: 'https://hashnode.com/@hasabtech',
+      hashnode: 'https://blog.hasab.tech',
       website: 'https://chat.whatsapp.com/LZ0CuvnovXnHF7xhwd9poD',
     }
   };

@@ -12,7 +12,7 @@ const ResourcesSection = () => {
         </Description>
 
         <Cards>
-          <Card href="https://hashnode.com/@hasabtech" target="_blank" rel="noopener noreferrer">
+          <Card href="https://blog.hasab.tech" target="_blank" rel="noopener noreferrer">
             <CardTitle>Blogs</CardTitle>
             <CardIcon>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="48" height="48" fill="#265FF7">

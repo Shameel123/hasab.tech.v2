@@ -31,7 +31,7 @@ export const testimonials = [
   {
     testimony: "Behind every great learning experience is a team that cares. Our job at hasabTech is to make sure your journey is smooth, organized, and valuable. From managing our education programs to ensuring the quality of the content, client services, and our internal products, we're committed to making hasabTech a place you'll love coming back to. Your growth & success is our priority – and we take that seriously.",
     person: 'Ammad Ahmed',
-    designation: 'Manager and Q/A Tester',
+    designation: 'COO',
     linkedin: 'https://www.linkedin.com/in/ammad-ahmed-7466a618b/',
     avatar: ammad_ahmad,
   },
