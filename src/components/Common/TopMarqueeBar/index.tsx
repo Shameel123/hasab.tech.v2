@@ -8,31 +8,31 @@ const TopMarqueeBar = () => {
         <S.Marquee>
           <div>
             <span>Registrations for the upcoming batch of Career Accelerator Program are Open.</span>
-            <a style={{ borderBottom: '#060B4D solid 1px' }} href="https://forms.gle/kE3L55e7zsN1VZ3j9" target="_blank">Register Now!</a>
+            <a style={{ borderBottom: '#060B4D solid 1px' }} href="https://accelerator.hasab.tech" target="_blank">Register Now!</a>
           </div>
           <div>
             <span>Registrations for the upcoming batch of Career Accelerator Program are Open.</span>
-            <a style={{ borderBottom: '#060B4D solid 1px' }} href="https://forms.gle/kE3L55e7zsN1VZ3j9" target="_blank">Register Now!</a>
+            <a style={{ borderBottom: '#060B4D solid 1px' }} href="https://accelerator.hasab.tech" target="_blank">Register Now!</a>
           </div>
           <div>
             <span>Registrations for the upcoming batch of Career Accelerator Program are Open.</span>
-            <a style={{ borderBottom: '#060B4D solid 1px' }} href="https://forms.gle/kE3L55e7zsN1VZ3j9" target="_blank">Register Now!</a>
+            <a style={{ borderBottom: '#060B4D solid 1px' }} href="https://accelerator.hasab.tech" target="_blank">Register Now!</a>
           </div>
           <div>
             <span>Registrations for the upcoming batch of Career Accelerator Program are Open.</span>
-            <a style={{ borderBottom: '#060B4D solid 1px' }} href="https://forms.gle/kE3L55e7zsN1VZ3j9" target="_blank">Register Now!</a>
+            <a style={{ borderBottom: '#060B4D solid 1px' }} href="https://accelerator.hasab.tech" target="_blank">Register Now!</a>
           </div>
           <div>
             <span>Registrations for the upcoming batch of Career Accelerator Program are Open.</span>
-            <a style={{ borderBottom: '#060B4D solid 1px' }} href="https://forms.gle/kE3L55e7zsN1VZ3j9" target="_blank">Register Now!</a>
+            <a style={{ borderBottom: '#060B4D solid 1px' }} href="https://accelerator.hasab.tech" target="_blank">Register Now!</a>
           </div>
           <div>
             <span>Registrations for the upcoming batch of Career Accelerator Program are Open.</span>
-            <a style={{ borderBottom: '#060B4D solid 1px' }}href="https://forms.gle/kE3L55e7zsN1VZ3j9" target="_blank">Register Now!</a>
+            <a style={{ borderBottom: '#060B4D solid 1px' }}href="https://accelerator.hasab.tech" target="_blank">Register Now!</a>
           </div>
           <div>
             <span>Registrations for the upcoming batch of Career Accelerator Program are Open.</span>
-            <a style={{ borderBottom: '#060B4D solid 1px' }}href="https://forms.gle/kE3L55e7zsN1VZ3j9" target="_blank">Register Now!</a>
+            <a style={{ borderBottom: '#060B4D solid 1px' }}href="https://accelerator.hasab.tech" target="_blank">Register Now!</a>
           </div>
         </S.Marquee>
       </S.MarqueeContainer>
