@@ -23,7 +23,7 @@ export default function Home() {
       <HasabTechEducation />
       <ProgramsSection />
       <FinancilaFreedom />
-      <Registrations />
+      {/* <Registrations /> */}
       <ResourcesSection />
       <Contribute />
       <MeetTheTeam />

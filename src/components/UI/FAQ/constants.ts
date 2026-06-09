@@ -33,16 +33,16 @@ export const faqData: FAQItem[] = [
     answer:
       'The fees collected from the Career Accelerator Program are reinvested to cover essential operational costs such as learning materials, resources, platform development, and hosting. This allows us to maintain the quality of education and support provided to learners while ensuring the sustainability of the program. Being a non-profit means all funds are used for the initiative—not that it is personally funded.',
   },
-  {
-    question: 'How much Career Accelerator Program will cost me?',
-    answer:
-      'The fee of Career Accelerator Program is PKR 1000 per month. This fee covers all the resources, mentorship, and support provided throughout the program. However, we also offer financial aid options for those who may not be able to afford the full fee. Read more about our financial aid options on the Career Accelerator Program page.',
-  },
-  {
-    question: 'Do you provide certifications?',
-    answer:
-      'Providing certifications depends on the specific program. For the Career Accelerator Program, we do provide a certificate of completion for each track that the participants successfully complete. However, for the study abroad guide programs, we do not provide any certifications as they are more informational and guidance-based.',
-  },
+  // {
+  //   question: 'How much Career Accelerator Program will cost me?',
+  //   answer:
+  //     'The fee of Career Accelerator Program is PKR 1000 per month. This fee covers all the resources, mentorship, and support provided throughout the program. However, we also offer financial aid options for those who may not be able to afford the full fee. Read more about our financial aid options on the Career Accelerator Program page.',
+  // },
+  // {
+  //   question: 'Do you provide certifications?',
+  //   answer:
+  //     'Providing certifications depends on the specific program. For the Career Accelerator Program, we do provide a certificate of completion for each track that the participants successfully complete. However, for the study abroad guide programs, we do not provide any certifications as they are more informational and guidance-based.',
+  // },
   {
     question: 'Do you provide internships/jobs?',
     answer:
