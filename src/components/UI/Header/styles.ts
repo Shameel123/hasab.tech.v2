@@ -7,7 +7,7 @@ export const Wrapper = styled.section`
   padding: 1rem 0;
   border-bottom: 0.5px solid #3d3d3d;
   position: fixed;
-  top: 2.2rem;
+  top: 0;
   left: 0;
   z-index: 10000;
   width: 100%;

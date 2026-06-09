@@ -5,7 +5,6 @@ import StyledComponentsRegistry from '../../../libs/registry';
 import { GlobalStyles } from './GlobalStyles';
 import { Footer, Header, Preloader } from '..';
 import { useState } from 'react';
-import TopMarqueeBar from '../Common/TopMarqueeBar';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [complete, setComplete] = useState(false);
@@ -17,7 +16,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       >
         <GlobalStyles />
         <Preloader setComplete={setComplete} />
-        <TopMarqueeBar />
         <div className={complete ? 'complete' : 'not_complete'}>
           <Header />
           {children}
